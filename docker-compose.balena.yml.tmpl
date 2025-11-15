@@ -16,14 +16,7 @@ services:
     labels:
       io.balena.features.dbus: "1"
       io.balena.features.firmware: "1"
-  timezone:
-    image: bh.cr/balenalabs/timezone
-    restart: always
-    privileged: true
-    labels:
-      io.balena.features.supervisor-api: '1'
-    environment:
-      TZ: ${TZ}
+
   anthias-server:
     image: screenly/anthias-server:${GIT_SHORT_HASH}-${BOARD}
     environment:
