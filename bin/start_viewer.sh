@@ -31,6 +31,11 @@ chown -Rf root:root /usr/lib/sudo
 chown -f root:root /etc/sudoers
 chmod -f 4755 /usr/bin/sudo
 
+#set the timezone
+sudo ln -fs "/usr/share/zoneinfo/Europe/Warsaw" /etc/localtime
+sudo dpkg-reconfigure tzdata
+
+
 # SIGUSR1 from the viewer is also sent to the container
 # Prevent it so that the container does not fail
 trap '' 16
