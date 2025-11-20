@@ -33,7 +33,6 @@ chmod -f 4755 /usr/bin/sudo
 
 #set the timezone
 sudo ln -fs "/usr/share/zoneinfo/Europe/Warsaw" /etc/localtime
-sudo dpkg-reconfigure tzdata
 
 
 # SIGUSR1 from the viewer is also sent to the container
